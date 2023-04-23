@@ -1,11 +1,18 @@
 :root {
-    --background: black;
+    --background: white;
     --text-color: white;
+    --peacock-size: 420px;
 }
 
 html {
     background-color: var(--background);
     cursor: none;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
 
 }
 
@@ -19,34 +26,26 @@ a {
     cursor: pointer;
     color: var(--text-color);
     text-decoration: none;
-    filter: invert();
-    margin: 10px;
+    margin: 21px;
 
 }
 
-.main-link {
-    font-size: 2.5rem;
-    filter: none;
-    text-decoration-line: underline; 
-}
-
-img, #peacock{
+img,
+#peacock {
     position: absolute;
-    width: 30%;
+    width: var(--peacock-size);
+    max-width: calc(90vh);
     top: 25%;
     left: 35%;
-    z-index: -1;
-  
+    z-index: 99;
 }
 
-.top,
-.left,
-.bottom,
-.right {
+/* Menu */
+.menu-item {
     position: absolute;
-    padding: 10px;
-    display: grid;
-    margin: 4vw;
+    display: flex;
+    flex-direction: column;
+    margin: 42px;
     font-size: 2.1rem;
     font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -69,27 +68,35 @@ img, #peacock{
     bottom: 0;
 }
 
-/* Mouse div */
+.main-item {
+    font-size: 2.5rem;
+    text-decoration-line: underline;
+    filter: invert();
+}
+
+
+/* Mouse element */
 #mouse-div {
     position: absolute;
+    overflow: hidden;
     z-index: -1;
     width: 420px;
     height: 420px;
-    background-color: var(--background);
+    background-color: var(--cursor-color);
     opacity: 50%;
-    filter: invert();
     border-radius: 50%;
 }
 
-/* Mobile styles */
-@media only screen and (max-width: 600px) {
-
-    .top,
-    .right,
-    .left,
-    .bottom {
+/* Mobile styles flipped*/
+@media screen and (max-width: 700px) {
+    .menu-item {
         position: relative;
-        margin: 2vh auto;
         text-align: center;
+        margin: 4px;
+        font-size: 1.4rem;
+    }
+
+    img #peacock {
+        position: relative;
     }
 }
