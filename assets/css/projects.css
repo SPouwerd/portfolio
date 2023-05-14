@@ -1,48 +1,31 @@
-.main-title {
-  font-size: 2.5rem;
-  text-decoration-line: underline;
-  color: var(--text-color);
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  margin: 42px;
-  font-size: 3rem;
-  font-weight: bold;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
 
-a.back-link {
-  position: relative;
-  font-size: 0.8rem;
-  text-decoration: none;
-  text-decoration-line: none;
-  color: black;
-}
-
-.project-list {
-  background-color: aquamarine;
-  overflow: hidden;
+#project-list {
   display: flex;
-  position: relative;
-  justify-content: center;
-  top: 120px;
-  width: 100%;
+  flex: 1;
+  overflow-x: hidden;
 }
 
 .project-card {
   background-color: antiquewhite;
-  position: relative;
-  width: 45%;
-  height: 420px;
-  margin: 3%;
-  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  flex: 0 0 auto;
+  margin: 0 21px 21px 21px;
+  width: 512px;
+  border-radius: 21px;
+}
+
+.project-card:first-of-type {
+ margin-left: 42px;
+}
+
+.project-card img {
+    width: 512px;
 }
 
 .card-title {
   font-size: 1.5rem;
-  top: 333px;
-  position: relative;
+  margin: auto 21px 42px 21px;
   text-align: center;
 }
 

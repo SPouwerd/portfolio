@@ -1,19 +1,8 @@
-html {
-  cursor: none;
-  -webkit-user-select: none;
-  /* Safari */
-  -ms-user-select: none;
-  /* IE 10 and IE 11 */
-  user-select: none;
-  /* Standard syntax */
-}
-
 body {
   overflow: hidden;
 }
 
 a {
-  cursor: pointer;
   color: var(--background);
   margin: 21px;
 }
@@ -61,18 +50,6 @@ img,
   color: var(--text-color);
 }
 
-/* Mouse element */
-#mouse-div {
-  position: relative;
-  overflow: hidden;
-  z-index: -1;
-  width: 420px;
-  height: 420px;
-  background-color: var(--cursor-color);
-  opacity: 50%;
-  border-radius: 50%;
-}
-
 @media screen and (max-width: 700px) {
   body {
     overflow-y: scroll;
@@ -88,9 +65,7 @@ img,
     margin: auto;
     padding: 21px;
   }
-  #mouse-div {
-    display: none;
-  }
+
   a {
     color: var(--text-color);
   }
@@ -101,7 +76,4 @@ img,
     margin: 4px;
     font-size: 1.4rem;
   }
-  /* .menu-item:last-of-type {
-        margin-top: 84px;
-    } */
 }

@@ -1,40 +1,41 @@
 const projects = [
   {
-    title: "Card 1",
+    title: "Fitspot",
     description: "This is the description for Card 1",
-    image: "card1.jpg",
+    url: "test1.html",
   },
   {
-    title: "Card 2",
-    description: "This is the description for Card 2",
-    image: "card2.jpg",
+    title: "QR code as business card",
+    description:
+      "This is the description for Cs the desthe description for Cs the desthe description for Cs the desthe description for Cs the description for Cs the description for Cs the description for Card 2",
+    url: "test2.html",
   },
   {
-    title: "Card 3",
+    title: "Websocket Robotcontroller",
     description: "This is the description for Card 3",
-    image: "card3.jpg",
+    url: "test3.html",
   },
 ];
+
 // Get the container element where the cards will be rendered
-const container = document.getElementsByClassName("project-list");
+const projectContainer = document.getElementById("project-list");
 
-// Loop through the cards and create HTML elements dynamically
+let html = "";
+
 projects.forEach((card) => {
-  // Create a div element for the card
-  const cardElement = document.createElement("div");
-  cardElement.classList.add("project-card");
+  html += `
+    <div class="project-card">
+    <a class="card-title"  href="stijnvanderpouw.com/projects/${card.url}">
+    ${card.title}
+    <div class="card-description">${card.description}</div>
+      </a>
+    </div>
+  `;
+});
 
-  // Create an image element
-  const imageElement = document.createElement("img");
-  imageElement.src = card.image;
-  cardElement.appendChild(imageElement);
-
-  const titleElement = document.createElement("div");
-  titleElement.classList.add("project-title");
-
-  const descriptionElement = document.createElement("div");
-  descriptionElement.classList.add("project-description");
-
-  // Append the card element to the container
-  container.appendChild(cardElement);
+projectContainer.innerHTML = html;
+// TODO: disable horizontal scrolling
+projectContainer.addEventListener("wheel", (evt) => {
+  evt.preventDefault();
+  projectContainer.scrollLeft += evt.deltaY;
 });

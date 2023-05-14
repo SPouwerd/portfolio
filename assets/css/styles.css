@@ -6,15 +6,66 @@
 
 html {
   background-color: var(--background);
+  cursor: none;
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
   font-family: sans-serif;
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
   color: var(--text-color);
+}
+
+.page-title {
+  font-size: 2.5rem;
+  text-decoration-line: underline;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  margin: 42px 0 42px 42px;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+a.back-link {
+  font-size: 0.8rem;
+  color: black;
+}
+
+/* Mouse element */
+#mouse-div {
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  width: 420px;
+  height: 420px;
+  background-color: var(--cursor-color);
+  opacity: 50%;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 700px) {
+  #mouse-div {
+    display: none;
+  }
 }

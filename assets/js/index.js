@@ -1,4 +1,5 @@
 // MOUSE
+body = document.body.innerHTML += '<div id="mouse-div"></div>';
 
 // Get the follow-div element
 var followDiv = document.getElementById("mouse-div");
