@@ -1,3 +1,6 @@
+.back-link{
+  font-size: 1rem;
+}
 
 #project-list {
   display: flex;
@@ -62,7 +65,7 @@
   padding-top: 42px;
 }
 
-#project {
+#project-button {
   border-color: black;
   border-width: 3px;
   border-style: solid;
