@@ -1,29 +1,35 @@
 const projects = [
   {
-    title: "FIT-SPOT",
+    title: "Fit Spot",
     description: "This is the description for Card 1",
-    url: "test1.html",
+    url: "fit-spot.html",
     img: "fit-spot.png",
   },
   {
-    title: "API gateway",
+    title: "api adapter",
     description:
       "This is the description for Cs the de for Cardis is the description for Cs the desthe description for Cs the desthe description for Cs the desthe description for Cs the description for Cs the description for Cs the description for Card 2",
-    url: "test2.html",
+    url: "api-adapter.html",
     img: "network.jpg",
   },
   {
-    title: "QR business card",
+    title: "QR-business card",
     description:
       "This is the description for Cs the de for Cardis is the description for Cs the desthe description for Cs the desthe description for Cs the desthe description for Cs the description for Cs the description for Cs the description for Card 2",
-    url: "test2.html",
+    url: "qr-card.html",
     img: "qr-code.jpg",
   },
   {
     title: "Robot controler",
     description: "This is the description for Card 3",
-    url: "test3.html",
+    url: "RPI-controller.html",
     img: "raspberry-pi.jpg",
+  },
+  {
+    title: "re-design domain HBOI",
+    description: "This is the description for Card 3",
+    url: "hboi.html",
+    img: "hboi.png",
   },
 ];
 
@@ -42,7 +48,7 @@ projects.forEach((card) => {
           ${card.description}
           <div class="card-actions">
           <a id="project"
-            href="stijnvanderpouw.com/projects/${card.url}">
+            href="/projects/${card.url}">
             More info
           </a>
           </div>
