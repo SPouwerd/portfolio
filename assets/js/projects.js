@@ -1,19 +1,29 @@
 const projects = [
   {
-    title: "Fitspot",
+    title: "FIT-SPOT",
     description: "This is the description for Card 1",
     url: "test1.html",
+    img: "fit-spot.png",
   },
   {
-    title: "QR code as business card",
+    title: "API gateway",
     description:
-      "This is the description for Cs the desthe description for Cs the desthe description for Cs the desthe description for Cs the description for Cs the description for Cs the description for Card 2",
+      "This is the description for Cs the de for Cardis is the description for Cs the desthe description for Cs the desthe description for Cs the desthe description for Cs the description for Cs the description for Cs the description for Card 2",
     url: "test2.html",
+    img: "network.jpg",
   },
   {
-    title: "Websocket Robotcontroller",
+    title: "QR business card",
+    description:
+      "This is the description for Cs the de for Cardis is the description for Cs the desthe description for Cs the desthe description for Cs the desthe description for Cs the description for Cs the description for Cs the description for Card 2",
+    url: "test2.html",
+    img: "qr-code.jpg",
+  },
+  {
+    title: "Robot controler",
     description: "This is the description for Card 3",
     url: "test3.html",
+    img: "raspberry-pi.jpg",
   },
 ];
 
@@ -24,13 +34,21 @@ let html = "";
 
 projects.forEach((card) => {
   html += `
-    <div class="project-card">
-    <a class="card-title"  href="stijnvanderpouw.com/projects/${card.url}">
-    ${card.title}
-    <div class="card-description">${card.description}</div>
-      </a>
-    </div>
-  `;
+    <div class="project-card"
+        style="background-image:url(/assets/images/projects/${card.img})">
+      <div class="card-title">
+        ${card.title}
+        <div class="card-description">
+          ${card.description}
+          <div class="card-actions">
+          <a id="project"
+            href="stijnvanderpouw.com/projects/${card.url}">
+            More info
+          </a>
+          </div>
+          </div>
+          </div>
+      </div>`;
 });
 
 projectContainer.innerHTML = html;

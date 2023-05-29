@@ -6,13 +6,18 @@
 }
 
 .project-card {
-  background-color: antiquewhite;
+  background-color: white;
+  background-position: center;
   display: flex;
   justify-content: center;
   flex: 0 0 auto;
   margin: 0 21px 21px 21px;
   width: 512px;
   border-radius: 21px;
+  border-style: solid;
+  border-width: 3px;
+  box-shadow: 4px 4px 8px;
+  height: 90%;
 }
 
 .project-card:first-of-type {
@@ -25,12 +30,46 @@
 
 .card-title {
   font-size: 1.5rem;
-  margin: auto 21px 42px 21px;
+  margin: auto 0 0 0;
+  padding: 18px 18px 42px 21px;
   text-align: center;
+  background-color: white;
+  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 18px;
+  border-color: black;
+  border-style: solid;
+  border-top-width: 3px;
+  width: 100%;
+  max-height: 50px;
+  transition: max-height 0.20s ease-out;
+  overflow: hidden;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2.9rem;
+}
+
+
+.card-title:hover {
+  max-height: 800px;
+  transition: max-height 0.22s ease-in;
 }
 
 .card-description {
-  font-size: 0.8rem;
+  padding-top: 14px;
+  font-size: 1.2rem;
+}
+
+.card-actions {
+  padding-top: 42px;
+}
+
+#project {
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 6px;
+  margin: 12px 12px;
+  padding: 18px 42px;
+
 }
 
 @media screen and (max-width: 700px) {
