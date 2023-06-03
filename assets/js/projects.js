@@ -1,6 +1,6 @@
 const projects = [
   {
-    title: "Fit Spot",
+    title: "Fit-spot",
     description: "Comming soon",
     url: "fit-spot.html",
     img: "fit-spot.png",
@@ -34,14 +34,14 @@ const projects = [
 ];
 
 // Get the container element where the cards will be rendered
-const projectContainer = document.getElementById("project-list");
+const projectContainer = document.getElementById("card-spawn");
 
 let html = "";
 
 projects.forEach((card) => {
   html += `
     <div class="project-card"
-        style="background-image:url(/assets/images/projects/${card.img})">
+        style="background-image:url(assets/images/projects/${card.img})">
       <div class="card-title">
         ${card.title}
         <div class="card-description">

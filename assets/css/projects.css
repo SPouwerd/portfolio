@@ -2,7 +2,7 @@
   font-size: 1rem;
 }
 
-#project-list {
+  #card-spawn {
   display: flex;
   flex: 1;
   overflow-x: hidden;
@@ -76,10 +76,11 @@
 }
 
 @media screen and (max-width: 700px) {
-  .project-list {
-    position: relative;
-    text-align: center;
+/* #project-list {    
+    flex-direction: column;
     margin: 4px;
     font-size: 1.4rem;
-  }
+    height: 100%;
+
+  } */
 }
